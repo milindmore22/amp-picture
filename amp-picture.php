@@ -3,14 +3,14 @@
  * AMP plugin name compatibility plugin bootstrap.
  *
  * @package   Google\AMP_Picture_Compat
- * @author    Your Name, Google
+ * @author    milindmore22, rtCamp
  * @license   GPL-2.0-or-later
  * @copyright 2020 Google Inc.
  *
  * @wordpress-plugin
  * Plugin Name: AMP Picture Compat
  * Plugin URI: https://wpindia.co.in/
- * Description: Plugin add compatibility for picture element.
+ * Description: Plugin add compatibility for picture element, to be removed once <a href="https://github.com/ampproject/amp-wp/issues/6676">#6676</a>
  * Version: 0.1
  * Author: milindmore22, Google
  * Author URI: https://yoursite.com
