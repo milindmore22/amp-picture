@@ -21,34 +21,11 @@
 namespace Google\AMP_Picture_Compat;
 
 /**
- * Whether the page is AMP.
+ * Add sanitizers to convert non-AMP functions to AMP components.
  *
- * @return bool Is AMP.
+ * @see https://amp-wp.org/reference/hook/amp_content_sanitizers/
  */
-function is_amp() {
-	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
-}
-
-/**
- * Run Hooks.
- */
-function add_hooks() {
-
-	/**
-	 *  Keep this if you are using theme.
-	 */
-	if ( is_amp() ) {
-
-		/**
-		 * Add sanitizers to convert non-AMP functions to AMP components.
-		 *
-		 * @see https://amp-wp.org/reference/hook/amp_content_sanitizers/
-		 */
-		add_filter( 'amp_content_sanitizers', __NAMESPACE__ . '\filter_sanitizers' );
-	}
-}
-
-add_action( 'wp', __NAMESPACE__ . '\add_hooks' );
+add_filter( 'amp_content_sanitizers', __NAMESPACE__ . '\filter_sanitizers' );
 
 /**
  * Add sanitizer to fix up the markup.
